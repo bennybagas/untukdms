@@ -1,0 +1,40 @@
+
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#fff; background:#000;}
+
+/* Background: will use local image if present via .bg class */
+.bg{
+  position:fixed; inset:0; background-size:cover; background-position:center; z-index:0;
+  background-image: url('assets/background.jpg'), linear-gradient(180deg, #f7b7d0 0%, #ffd3b6 50%, #c6f1e7 100%);
+  filter: saturate(1.05) contrast(0.95);
+}
+.overlay{position:fixed; inset:0; background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55)); z-index:1;}
+
+.container{
+  position:relative; z-index:2; max-width:880px; margin:6vh auto; padding:28px; border-radius:14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)); backdrop-filter: blur(6px) saturate(120%);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.45); text-align:center;
+}
+h1{font-size:24px; margin-bottom:10px; font-weight:600}
+.text{min-height:150px; font-size:18px; line-height:1.7; margin-bottom:16px; text-align:left; padding:10px 12px; border-radius:8px;}
+.controls{display:flex; gap:10px; justify-content:center; margin-bottom:12px;}
+.btn{padding:10px 16px; border-radius:10px; border:none; cursor:pointer; font-size:15px;}
+.btn-primary{background:rgba(255,255,255,0.12); color:#fff;}
+.btn-ghost{background:transparent; color:#fff; opacity:0.95; border:1px solid rgba(255,255,255,0.06);}
+.choices{display:flex; gap:12px; justify-content:center; margin-top:12px;}
+.btn-accept{background: linear-gradient(90deg,#ff8fab,#ffb085); color:#222; padding:12px 20px; font-weight:600;}
+.btn-decline{background: rgba(255,255,255,0.06); color:#fff; padding:12px 18px;}
+
+.progress{height:8px; width:100%; background:rgba(255,255,255,0.06); border-radius:10px; margin-top:16px; overflow:hidden}
+.progress > i{display:block; height:100%; width:0%; background:linear-gradient(90deg, rgba(255,255,255,0.14), rgba(255,255,255,0.34)); transition:width 0.4s ease}
+
+.hint{font-size:13px; opacity:0.9; margin-top:10px}
+
+/* responsive */
+@media (max-width:600px){
+  .container{margin:4vh 12px; padding:18px}
+  h1{font-size:20px}
+  .text{font-size:16px}
+}

@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Untuk Dewi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<main class="container" role="main" aria-live="polite">
+  <h1>Hai Dewi Maria Simanjuntak...</h1>
+  <div id="text" class="text"></div>
+  <div id="controls" class="controls">
+    <button id="prevBtn" class="btn btn-ghost" onclick="prevSlide()" aria-label="Sebelumnya">◀ Sebelumnya</button>
+    <button id="nextBtn" class="btn btn-primary" onclick="onNextClick()" aria-label="Lanjut">Lanjut ▶</button>
+  </div>
+
+  <div id="choices" class="choices" style="display:none;">
+    <button class="btn btn-accept" onclick="showAccept()">💖 Terima</button>
+    <button class="btn btn-decline" onclick="showDecline()">💔 Maaf, belum bisa</button>
+  </div>
+
+  <div class="progress"><i></i></div>
+  <p class="hint">Tip: Klik "Lanjut" untuk memulai musik & bacaan.</p>
+</main>
+
+<!-- local audio: place assets/bgm.mp3 for offline playback -->
+<audio id="bgm" loop>
+  <source src="assets/bgm.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<script src="script.js"></script>
+</body>
+</html>
