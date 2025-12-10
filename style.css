@@ -38,3 +38,28 @@ h1{font-size:24px; margin-bottom:10px; font-weight:600}
   h1{font-size:20px}
   .text{font-size:16px}
 }
+
+/* Floating petal animation */
+.particle {
+    position: fixed;
+    font-size: 32px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    animation: floatUp 2s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-60px) translateX(-20px) scale(1.05);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(-150px) translateX(20px) scale(0.8);
+        opacity: 0;
+    }
+}
