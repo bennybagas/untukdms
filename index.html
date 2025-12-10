@@ -12,7 +12,7 @@
 <div class="overlay"></div>
 
 <main class="container" role="main" aria-live="polite">
-  <h1>Hai Dewi Maria Simanjuntak...</h1>
+  <h1>Hai, Dewi Maria Simanjuntak...</h1>
   <div id="text" class="text"></div>
   <div id="controls" class="controls">
     <button id="prevBtn" class="btn btn-ghost" onclick="prevSlide()" aria-label="Sebelumnya">◀ Sebelumnya</button>
@@ -20,8 +20,8 @@
   </div>
 
   <div id="choices" class="choices" style="display:none;">
-    <button class="btn btn-accept" onclick="showAccept()">💖 Terima</button>
-    <button class="btn btn-decline" onclick="showDecline()">💔 Maaf, belum bisa</button>
+    <button id="accept" class="btn btn-accept" onclick="showAccept()">💖 Terima</button>
+    <button id="reject" class="btn btn-decline" onclick="showDecline()">💔 Maaf, belum bisa</button>
   </div>
 
   <div class="progress"><i></i></div>
