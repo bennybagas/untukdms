@@ -77,10 +77,9 @@ function showAccept() {
       </p>
     </div>`;
 
+  notifyAnswer("Dewi memilih: TERIMA ❤️");
   spawnParticles("🌹");
   setTimeout(() => spawnParticles("💖"), 200);
-
-  notifyAnswer("Dewi memilih: TERIMA ❤️");
 }
 
 function showDecline() {
@@ -92,10 +91,9 @@ function showDecline() {
       </p>
     </div>`;
 
+  notifyAnswer("Dewi memilih: TOLAK 💔");
   spawnParticles("💔");
   setTimeout(() => spawnParticles("🥀"), 200);
-
-  notifyAnswer("Dewi memilih: TOLAK 💔");
 }
 
 function spawnParticles(emoji) {
