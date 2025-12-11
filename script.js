@@ -79,7 +79,10 @@ function showAccept() {
 
   spawnParticles("🌹");
   setTimeout(() => spawnParticles("💖"), 200);
+
+  notifyAnswer("Dewi memilih: TERIMA ❤️");
 }
+
 function showDecline() {
   document.querySelector('.container').innerHTML = `
     <div style="padding:20px">
@@ -91,8 +94,9 @@ function showDecline() {
 
   spawnParticles("💔");
   setTimeout(() => spawnParticles("🥀"), 200);
-}
 
+  notifyAnswer("Dewi memilih: TOLAK 💔");
+}
 
 function spawnParticles(emoji) {
     const total = 18; // jumlah partikel lebih banyak
@@ -118,6 +122,14 @@ function spawnParticles(emoji) {
     }
 }
 
+function notifyAnswer(answer) {
+  emailjs.send("service_vgyz5ag", "template_plqdja5", {
+    jawaban: answer,
+    waktu: new Date().toLocaleString("id-ID")
+  })
+  .then(() => console.log("Notif terkirim:", answer))
+  .catch(err => console.error("Gagal:", err));
+}
 
 window.addEventListener('DOMContentLoaded', ()=>{
   prevBtn.style.display = 'none';
